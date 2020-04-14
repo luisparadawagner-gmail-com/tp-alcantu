@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PruebaComponent } from './prueba/prueba.component';
-import { AltaAlumnoComponent } from './altaAlumno/alta-alumno.component';
+import { AltaAlumnoComponent } from './alta-alumno/alta-alumno.component';
 
 @NgModule({
 	declarations: [ AppComponent, PruebaComponent, AltaAlumnoComponent ],

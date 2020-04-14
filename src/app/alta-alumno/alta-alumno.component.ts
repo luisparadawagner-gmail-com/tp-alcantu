@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-altaAlumno',
+    selector: 'app-alta-alumno',
     templateUrl: './alta-alumno.component.html',
     styleUrls: [ './alta-alumno.component.css' ]
 })
