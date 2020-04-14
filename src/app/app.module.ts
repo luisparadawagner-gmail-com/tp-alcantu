@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PruebaComponent } from './prueba/prueba.component';
-import { altaAlumnoComponent } from './altaAlumno/alta-alumno';
+import { AltaAlumnoComponent } from './altaAlumno/alta-alumno.component';
 
 @NgModule({
-	declarations: [ AppComponent, PruebaComponent, altaAlumnoComponent ],
+	declarations: [ AppComponent, PruebaComponent, AltaAlumnoComponent ],
 	imports: [ BrowserModule, AppRoutingModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]

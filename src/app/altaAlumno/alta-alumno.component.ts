@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: [ './alta-alumno.component.css' ]
 })
 
-export class altaAlumnoComponent{
+export class AltaAlumnoComponent{
     
 }
