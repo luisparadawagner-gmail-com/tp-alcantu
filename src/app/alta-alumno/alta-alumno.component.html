@@ -1,1 +1,26 @@
-<h1>Componente Alta Alumno</h1>
+<h1>Formulario para dar de alta un alumno</h1>
+
+<form [formGroup]="personaForm" (ngSubmit) = "guardarPersona()">
+     
+    <label>Nombre
+        <input type = "text" formControlName = "nombre">
+    </label>
+
+    <label>Apellido
+       <input type = "text" formControlName = "apellido">
+   </label>
+
+   <label>DNI
+       <input type = "number" formControlName = "dni">
+   </label>
+
+   <label>Edad
+       <input type = "number" formControlName = "edad">
+   </label>
+
+   <label>Direccion
+       <input type = "text" formControlName = "direccion">
+   </label>
+
+   <button type = "submit"> Guardar </button>
+</form>
