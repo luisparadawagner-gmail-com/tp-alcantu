@@ -1,0 +1,66 @@
+<h1>Alta Auto</h1>
+<form style=' width:400px;' [formGroup] = 'autoForm' (ngSubmit) = submit()>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Marca</mat-label>
+        <input matInput placeholder="ej. Fiat" type="text" formControlName = "marca">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Modelo</mat-label>
+        <input input matInput placeholder="ej. Uno" type="text" formControlName = "modelo">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Version</mat-label>
+        <input matInput placeholder="ej. 2001" type="text" formControlName = "version">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Lugar de origen</mat-label>
+        <input matInput placeholder="ej. Italia" type="text" formControlName = "origen">
+    </mat-form-field>
+
+        <div style=' width:500px;' formGroupName="velocidadMax">
+            <mat-label>Velocidad Maxima: </mat-label>
+            <mat-form-field appearance="legacy">
+                <mat-label>km/h: </mat-label>
+                <input matInput placeholder="ej. 100" type="number" formControlName ="kmh">
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <mat-label>mph: </mat-label>
+                <input matInput placeholder="ej. 32" type="number" formControlName = "mph">
+            </mat-form-field>
+        </div>
+
+        <div style=' width:500px; padding-bottom: 20px;' formArrayName = "puertas">
+            <mat-label>Numero de Puertas</mat-label>
+
+            <div *ngFor = "let puerta of puertas.controls; let i=index">
+                <mat-label>Cantidad de Puertas: </mat-label>
+                <mat-form-field appearance="legacy">
+                    <input matInput placeholder="ej. 3" type="number" [formControlName]="i">
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button (click)="agregarPuerta()">Agregar cantidad de puertas</button>
+        </div>
+
+        <div style=' width:500px;' formArrayName = "colores">
+            <mat-label>Colores </mat-label>
+
+            <div *ngFor = "let color of colores.controls; let j=index">
+                <mat-label>Color: </mat-label>
+                <mat-form-field appearance="legacy">
+                    <input matInput placeholder="ej. Azul" type="text" [formControlName]="j">
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button (click)="agregarColor()">Agregar color</button>
+        </div>
+
+        Status Formulario: {{autoForm.status}}
+        <button mat-raised-button type = "submit">Guardar</button>
+
+</form>
