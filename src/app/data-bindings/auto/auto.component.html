@@ -1,0 +1,32 @@
+<p>auto works!</p>
+
+<p>Marca Hijo: {{marcaHijo}}</p>
+<button (click)="cambioMarca()">Enviar al padre</button>
+
+<p>Marca Interpolada: {{modeloAuto}}</p>
+<p>Version: {{auto.version}}</p>
+
+<ul>
+    <li *ngFor="let auto of autos">
+        {{auto}}
+    </li>
+</ul>
+
+<ul *ngIf="verAutos">
+    <li *ngFor="let auto of auto1">
+        Marca: {{auto.marca | lowercase}}
+        Modelo: {{auto.modelo | uppercase}}
+        <p *ngIf="auto.marca === 'Ford'">Muestra auto Ford</p>
+    </li>
+</ul>
+
+<div>
+    <h4>Event Binding</h4>
+    <button (click)="verAuto(modeloAuto)">Ver Auto</button>
+</div>
+
+<div>
+    <h4>Two way Data Binding</h4>
+    <input [(ngModel)]="marca">
+    <p>{{marca | uppercase}} </p>
+</div>
